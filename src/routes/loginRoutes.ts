@@ -5,7 +5,7 @@ interface RequestBody extends Request {
     body: { [key: string]: string | undefined }
 }
 
-function requireAuth ( req: Request, res: Response, next: NextFunction ): void {
+function requireAuth(req: Request, res: Response, next: NextFunction): void {
     if (req.session && req.session.loggedIn) {
         next();
         return;
@@ -58,7 +58,8 @@ router.get('/', (req: Request, res: Response) => {
                 <div>You are not logged in.</div>
                 <a href="/login">Login</a>
             </div>
-    `)}
+    `)
+    }
 });
 
 router.get('/logout', (req: Request, res: Response) => {
