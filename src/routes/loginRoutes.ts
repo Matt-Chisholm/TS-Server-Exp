@@ -15,6 +15,8 @@ function requireAuth(req: Request, res: Response, next: NextFunction): void {
     res.send('Not permitted');
 }
 
+
+
 const router = Router();
 
 router.get('/login', (req: Request, res: Response) => {
